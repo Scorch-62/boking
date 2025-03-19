@@ -12,7 +12,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.send_response(200)
         self.send_header("content-type", "text/html")
         self.end_headers()
-        with open("contacts.html", "r", encoding="utf-8") as file:
+        with open("index.html", "r", encoding="utf-8") as file:
             page = file.read()
         self.wfile.write(bytes(page, "utf-8"))
 
